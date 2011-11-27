@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jp.que.ti.yaddress</groupId>
+	<artifactId>yaddress</artifactId>
+	<packaging>jar</packaging>
+	<name>y's address writer for postcard. model jar</name>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<repositories>
+		<repository>
+			<id>local</id>
+			<name>Local Repository</name>
+			<url>file:${basedir}/repository</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<!-- test,install フェーズでもsurefire-report を有効にする。 -->
+			<plugin>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>test-test-surefire-report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report-only</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>install-test-surefire-report</id>
+						<phase>install</phase>
+						<goals>
+							<goal>report-only</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- -->
+
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>jp.que.ti.wk.itext</groupId>
+			<artifactId>iText</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>jp.que.ti.wk.itext</groupId>
+			<artifactId>iTextAsian</artifactId>
+			<version>0.0.0</version>
+		</dependency>
+		<!-- <dependency> <groupId>jp.que.ti.yhj.utils</groupId> <artifactId>yutils</artifactId>
+			<version>[1.0.0,)</version> </dependency> -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
