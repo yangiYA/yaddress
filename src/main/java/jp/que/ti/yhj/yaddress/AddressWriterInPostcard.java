@@ -173,7 +173,7 @@ public class AddressWriterInPostcard {
 		cb.beginText();
 		cb.setFontAndSize(f1, 22);
 		cb.setTextMatrix(//
-				1, 0, 0, 1, pixel(45), pixel(JAPAN_POSTCARD_H_MM - 18));
+				1, 0, 0, 1, pixel(45), pixel(JAPAN_POSTCARD_H_MM - 21));
 		cb.setCharacterSpacing(10.25f);
 		cb.showText("" + to.getZipCode());
 		cb.endText(); // ET
@@ -233,7 +233,7 @@ public class AddressWriterInPostcard {
 		cb.beginText();
 		cb.setFontAndSize(f1, 10);
 		cb.setTextMatrix(//
-				1, 0, 0, 1, pixel(5), pixel(14));
+				1, 0, 0, 1, pixel(5), pixel(18));
 		cb.setCharacterSpacing(7);
 		cb.showText("" + from.getZipCode());
 		cb.endText(); // ET
